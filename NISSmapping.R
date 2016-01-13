@@ -13,6 +13,10 @@ Scotland.limits <- geocode(c("Out Stack, Shetland",
 	"Rockall, Scotland",
 	"Bound SKerry, Out Skerries, Shetland Islands")
 )
+#####Set colour palletes#####
+pal <- wes_palette("Zissou", 4, type = "continuous")
+pal2 <- wes_palette("FantasticFox", 10, type ="continuous")
+
 ######plot worldmap specifically Scotland#######
 plot(newmap, 
 	xlim = range(Scotland.limits$lon),
@@ -21,12 +25,11 @@ plot(newmap,
 	col=pal,
 	fill=TRUE)
 NSIS <- read.csv("waypoints.csv")
-pal <- wes_palette("Zissou", 4, type = "continuous")
-pal2 <- wes_palette("FantasticFox", 10, type ="continuous")
+
 points(NSIS$LAT,NSIS$LON,col=pal2,cex=1.5,pch=17)
 
 ###list wesanderson movie pallette options###
-names(wes_palettes)
+#names(wes_palettes)
 
 ####print lat lon limits###
 #Scotland.limits
