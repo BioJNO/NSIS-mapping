@@ -15,7 +15,7 @@ Scotland.limits <- geocode(c("Out Stack, Shetland",
 )
 #####Set colour palletes#####
 pal <- wes_palette("Zissou", 4, type = "continuous")
-pal2 <- wes_palette("FantasticFox", 10, type ="continuous")
+pal2 <- wes_palette("FantasticFox", 5, type ="continuous")
 
 ######plot worldmap specifically Scotland#######
 plot(newmap, 
