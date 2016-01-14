@@ -34,10 +34,11 @@ add.alpha <- function(col, alpha=1){
           rgb(x[1], x[2], x[3], alpha=alpha))
 }
 #### Add alpha value to pal (background/ocean color) #####
-palalpha <- add.alpha(pal, alpha=0.9)
+palalpha <- add.alpha(pal, alpha=0.6)
 
 #### Load in lat lon coordinates from file ####
 NSIS <- read.csv("waypoints.csv")
+NSIS_recovered <- read.csv("NSIS_recovered_coordinates.csv")
 
 #### Plot blank worldmap specifically Scotland #####
 plot(newmap, 
@@ -49,4 +50,4 @@ plot(newmap,
 )
 
 #### Plot lat lon coordinates from file ####
-points(NSIS$LAT,NSIS$LON,col=pal2[1:4],cex=1.5,pch=17)
+points(NSIS_recovered$LAT,NSIS_recovered$LON,col=pal2[1:4],cex=1.5,pch=17)
