@@ -23,7 +23,8 @@ plot(newmap,
 	ylim = range(Scotland.limits$lat),
 	asp = 2,
 	col=pal,
-	fill=TRUE)
+	bg=pal,
+)
 NSIS <- read.csv("waypoints.csv")
 
 points(NSIS$LAT,NSIS$LON,col=pal2,cex=1.5,pch=17)
